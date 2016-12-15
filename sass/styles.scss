@@ -6,7 +6,7 @@
 
 /*******GLOBAL*******/
 html{background:#464646}
-body{background:#fff;font:400 15px/1.5 $fontCentury;color:#959595}
+body{background:#fff;font:400 15px/1.5 $fontCentury;color:$fontColorDefault}
 
 video, img{max-width:100%}
 /*******USEFUL STUFF*******/
@@ -133,7 +133,7 @@ a.button-clear{
   img{margin:0 auto 70px;}
   .imgWrap{min-height:250px;width:auto}
   h4{font-family:$fontHelvetica;font-weight:normal;font-size:$fontMedium - 4;color:$darkblue;margin-bottom:30px;text-transform:uppercase;line-height:1.2}
-  p{color:#959595;min-height:70px}
+  p{color:$fontColorDefault;min-height:70px}
   a{display:block}
   a:hover{text-decoration:none;}
   &:hover{
@@ -150,7 +150,16 @@ a.button-clear{
   p{margin-bottom:10px}
   .row{margin-bottom:100px;}
 }
+.bg-midgray .sectionSitefinity{
+  margin-bottom:0;
+  color:$fontColorDefault;
+  h2{color:$darkblue}
+}
 
+.sectionAem{
+  color:$white;
+  h3, h4{color:$white}
+}
 /*******FOOTER*******/
 .sectionContact{
   h2{color:$white}
