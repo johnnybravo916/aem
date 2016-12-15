@@ -1,4 +1,35 @@
 (function(){
+//SIDR
+  $(document).ready(function () {
+    $('#menu-responsive').sidr({
+      timing: 'ease-in-out',
+      speed: 500,
+      side: 'right'
+    });
+  });
+
+  $(".jsClose-sidr").click(function(){
+    $.sidr('close', 'sidr');
+  });
+  $(".icon--menuResponsive").click(function(){
+    $(this).toggleClass('js-active');
+  });
+  $( window ).resize(function () {
+    $.sidr('close', 'sidr');
+  });  
+  $('.js-dropdown').click(function(){
+    $(this).siblings('ul').slideToggle();
+    $(this).toggleClass('glyphicon-plus glyphicon-minus')
+    $(this).siblings('a').toggleClass('js-active');
+    $(this).toggleClass('js-active');
+  });
+  $('.menuMobile li:has(span)')
+  .mouseover(function() {
+    $(this).toggleClass('js-active');
+  })
+  .mouseout(function() {
+    $(this).toggleClass('js-active');
+  });
 //YEAR
   var currentYear = (new Date).getFullYear();
   $('.js-Year').text(currentYear);

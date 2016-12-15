@@ -14,7 +14,7 @@ video, img{max-width:100%}
 
 /*******HEADER*******/
 header{margin:50px 0}
-nav{
+nav.menuDesktop{
   float:right;
   li{display:inline}
   a{
@@ -24,6 +24,34 @@ nav{
   a.js-active{text-decoration:none;background:$lightblue;color:$white}
 }
 
+.sidr{display:block;position:fixed;top:0;height:100%;z-index:999999;width:280px;overflow-x:hidden;overflow-y:auto;}
+.sidr.right{left:auto;right:-280px;border-left:1px solid #a1a1a1}
+
+#sidr{background:#2d4d66}
+.branding-mobile{width:80px;margin:30px 0 0 100px}
+.icon--menuResponsive{width:55px;height:36px;float:right;background:url(../images/icon-burger.png);font-size:0}
+.sidr-open .icon--menuResponsive{background:url(../images/icon-close.png) center center no-repeat}
+.menuMobile{
+  position:relative;
+  ul{margin:0;padding:0}
+  li{
+  list-style-type:none;position:relative;
+    ul{display:none}
+    li a{background:$gray}
+    .js-dropdown{position:absolute;right:10px;top:13px;font-size:$fontMedium;width:30px;height:30px;color:$lightblue;cursor:pointer}
+    .js-dropdown.js-active{color:$white}
+  }
+  a{
+  font-weight:bold;display:block;width:100%;padding:15px 0;text-align:center;color:$lightblue;border-bottom:1px solid #2d4d66;background:$white;text-transform:uppercase;
+  &:hover{background:$lightblue;color:$white;text-decoration:none}
+  }
+  li.js-active{
+    .js-dropdown{color:$white}
+    > a{background:$lightblue;color:$white;text-decoration:none}
+  }
+  a.js-active{background:$lightblue;color:$white;text-decoration:none}
+}
+.jsClose-sidr{position:absolute}
 
 /*******REUSABLE*******/
 a,input, .animate, a:before{@include transition(all ease-in-out 500ms)}
