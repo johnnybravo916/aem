@@ -54,7 +54,7 @@ nav.menuDesktop{
 .jsClose-sidr{position:absolute}
 
 /*******REUSABLE*******/
-a,input, .animate, a:before{@include transition(all ease-in-out 500ms)}
+a,input, .animate, a:before, .sectionBoxCapabilities{@include transition(all ease-in-out 500ms)}
 
 .button, a.button{text-transform:uppercase;padding:5px 20px;border:2px solid $lightblue;border-radius:50px;font-weight:bold;}
 a.button-clear{
@@ -70,14 +70,26 @@ a.button-clear{
 }
 
 .sectionBox{
-  img{margin-bottom:70px;}
+  img{margin:0 auto 70px}
   h4{font-family:$fontHelvetica;font-weight:normal;font-size:$fontMedium - 4;color:$darkblue;margin-bottom:30px;text-transform:uppercase;line-height:1.2}
 }
 
 .bg-gray{background:$gray}
+.bg-midgray{background:$midgray}
 .bg-blue{
   background:$lightblue;position:relative;
   &:before{content:"";width:100%;height:50px;background:url(../images/bg-blue.png) repeat-x center center;position:absolute;top:-40px;left:0}
+}
+
+.bg-graySlant{
+  position:relative;margin-top:100px; 
+  &:before{content:"";width:100%;height:100px;background:url(../images/bg-gray.png) repeat-x center center;position:absolute;top:-80px;left:0} 
+}
+
+.banner{
+  text-transform:uppercase;text-align:center;display:flex;flex-direction: column;justify-content: center;height:$bannerHeight;background-position:center center;background-size:cover;color:$white;
+  h2{font:bold $fontLarge $fontHelvetica;line-height:1;margin:20px 0}
+  strong{font-size:$fontMedium;}
 }
 /*******HOME*******/
 .sectionFirstHome{
@@ -94,15 +106,43 @@ a.button-clear{
   }
 }
 
-.sectionContactHome{
+.sectionSecondHome_Top{
+  margin-bottom:150px;
+}
+/*******CAPABILITIES*******/
+.bannerCapabilities{background-image:url(../placeholder/banner-02.jpg)}
+
+.ourCapabilities-bottom{margin:100px 0 50px}
+.menuInner{
+  ul{margin:0;padding:0;float:right}
+  li{display:inline}
+  a{
+    display:inline-block;text-transform:uppercase;padding:10px;font-weight:bold;color:$lightblue;margin-left:10px;
+    &:hover{text-decoration:none;background:none;color:$orange}
+  }
+  a.js-active{color:$orange}
+}
+
+.sectionBoxCapabilities{
+  border:1px solid $white;background:#d7d7d7;padding:100px;
+  img{margin:0 auto 70px;}
+  .imgWrap{min-height:250px;width:auto}
+  h4{font-family:$fontHelvetica;font-weight:normal;font-size:$fontMedium - 4;color:$darkblue;margin-bottom:30px;text-transform:uppercase;line-height:1.2}
+  p{color:#959595;min-height:70px}
+  a{display:block}
+  a:hover{text-decoration:none;}
+  &:hover{
+    text-decoration:none;background:$darkblue;
+    h4, p, a{color:$white}
+  }
+}
+
+/*******FOOTER*******/
+.sectionContact{
   h2{color:$white}
   h3{color:$white}
 }
 
-.sectionSecondHome_Top{
-  margin-bottom:150px;
-}
-/*******FOOTER*******/
 footer{background:$darkgray;color:$white;padding:100px 0;text-align:center;text-transform:uppercase}
 footer small{font-size:$fontMedium}
 
@@ -134,7 +174,7 @@ footer small{font-size:$fontMedium}
     a.flex-next{background:url(../images/icon-bannerRight.png);}
     }
   .slider-mainWrap{
-    color:#fff;text-transform:uppercase;text-align:center;display:flex;flex-direction: column;justify-content: center;height:$flexsliderHeight;background-position:center center;background-size:cover;
+    color:#fff;text-transform:uppercase;text-align:center;display:flex;flex-direction: column;justify-content: center;height:$bannerHeight;background-position:center center;background-size:cover;
     h2{font:bold $fontLarge $fontHelvetica;line-height:1;margin:20px 0}
     strong{font-size:$fontMedium;}
     }
