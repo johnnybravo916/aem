@@ -13,7 +13,7 @@ video, img{max-width:100%}
 
 
 /*******HEADER*******/
-header{margin:50px 0}
+header{padding:50px 0}
 nav.menuDesktop{
   float:right;
   li{display:inline}
@@ -159,6 +159,13 @@ a.button-clear{
 .sectionAem{
   color:$white;
   h3, h4{color:$white}
+}
+/*******ERROR*******/
+.sectionError{
+  padding:150px 0 200px;text-align:center;text-transform:uppercase;
+  img{margin:0 auto 70px;}
+  h1{font-size:$fontLarge;font-family:$fontHelvetica;color:$darkblue;margin:0 0 20px;font-weight:bold}
+  p{color:$orange}
 }
 /*******FOOTER*******/
 .sectionContact{
