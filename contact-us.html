@@ -17,7 +17,7 @@
   <script src="js/jquery.js"></script>
 </head>
 <body>
-<div class="banner bannerCapabilities">
+<div class="banner bannerContact">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -28,59 +28,92 @@
   </div>
 </div>
 <!-- start header -->
-<header class="container">
-  <div class="col-xs-7 col-sm-9 col-md-3">
-    <a href="index.html" title="Annotate">
-      <img src="images/branding.png" class="img-responsive"/>
-      <h1 class="hidden">Annotate</h1>
-    </a>
+<header class="bg-lightgray">
+  <div class="container">
+    <div class="col-xs-7 col-sm-9 col-md-3">
+      <a href="index.html" title="Annotate">
+        <img src="images/branding.png" class="img-responsive"/>
+        <h1 class="hidden">Annotate</h1>
+      </a>
+    </div>
+    <div class="col-xs-5 col-sm-3 col-md-9">
+      <nav class="menuDesktop hidden-sm hidden-xs">
+        <ul>
+          <li><a href="index.html" title="Annotate">Home</a></li>
+          <li><a href="our-capabilities.html" title="Our Capabilities">Our Capabilities</a></li>
+          <li><a href="contact-us.html" class="js-active" title="Contact Us">Contact Us</a></li>
+        </ul>
+      </nav>
+      <a id="menu-responsive" class="icon--menuResponsive pull-right visible-xs visible-sm" href="#sidr">Toggle menu</a>
+    </div>
+    <!--start mobile menu-->
+    <div id="sidr">
+      <nav class="menuMobile">
+        <span class="jsClose-sidr">close</span>
+        <ul>
+          <li><a href="index.html" title="Annotate">Home</a></li>
+          <li>
+            <a href="our-capabilities.html" title="Our Capabilities">Our Capabilities</a>
+            <span class="glyphicon glyphicon-plus js-dropdown"></span>
+            <ul>
+              <li><a href="aem-tapestry.html" title="AEM Tapestry">AEM Tapestry</a></li>
+              <li><a href="sitefinity.html" title="Sitefinity">Sitefinity</a></li>
+              <li><a href="manage-hosting.html" title="Manage Hosting">Manage Hosting</a></li>
+            </ul>
+          </li>
+          <li><a href="contact-us.html" class="js-active" title="Contact Us">Contact Us</a></li>
+        </ul>
+      </nav>
+      <a href="index.html" title="Annotate"><img src="./images/brandingMobile.png" class="branding-mobile"/></a>
+    </div>
+    <!--end mobile menu-->
   </div>
-  <div class="col-xs-5 col-sm-3 col-md-9">
-    <nav class="menuDesktop hidden-sm hidden-xs">
-      <ul>
-        <li><a href="index.html" class="js-active" title="Annotate">Home</a></li>
-        <li><a href="our-capabilities.html" title="Our Capabilities">Our Capabilities</a></li>
-        <li><a href="contact-us.html" title="Contact Us">Contact Us</a></li>
-      </ul>
-    </nav>
-    <a id="menu-responsive" class="icon--menuResponsive pull-right visible-xs visible-sm" href="#sidr">Toggle menu</a>
-  </div>
-  <!--start mobile menu-->
-  <div id="sidr">
-    <nav class="menuMobile">
-      <span class="jsClose-sidr">close</span>
-      <ul>
-        <li><a href="index.html" class="js-active" title="Annotate">Home</a></li>
-        <li>
-          <a href="our-capabilities.html" title="Our Capabilities">Our Capabilities</a>
-          <span class="glyphicon glyphicon-plus js-dropdown"></span>
-          <ul>
-            <li><a href="aem-tapestry.html" title="AEM Tapestry">AEM Tapestry</a></li>
-            <li><a href="sitefinity.html" title="Sitefinity">Sitefinity</a></li>
-            <li><a href="manage-hosting.html" title="Manage Hosting">Manage Hosting</a></li>
-          </ul>
-        </li>
-        <li><a href="contact-us.html" title="Contact Us">Contact Us</a></li>
-      </ul>
-    </nav>
-    <a href="index.html" title="Annotate"><img src="./images/brandingMobile.png" class="branding-mobile"/></a>
-  </div>
-  <!--end mobile menu-->
 </header>
 <!-- end header -->
 
-<main>
- 
+<main class="bg-lightgray">
+  <div class="container">
+    <div class="row">
+      <section class="col-md-12 sectionComponents sectionForm" id="sectionForm">
+        <form action="contact-us.html#sectionForm" onsubmit="return(validate());" name="validateForm">
+          <h2>Contact Us</h2>
+          <h3>We can Create Your Vision</h3>
+          <div class="contactLine">Yes, I'm Interested</div>
+          <div class="contactLine">In Discussing A <input type="text" name="project"/></div>
+          <div class="contactLine">
+            Project For 
+            <input type="text" class="js-Dropdown" name="option_item"/>.
+            <div class="contactDropdown">
+              <div class="contactDropdownOption">Option 1</div>
+              <div class="contactDropdownOption">Option 2</div>
+              <div class="contactDropdownOption">Option 3</div>
+            </div>
+          </div>
+          <br/>
+          <div class="contactLine">My Name Is <input type="text" name="name"/></div>
+          <div class="contactLine">And You Can Email Me At <input type="text" name="email"/>.</div>
+          <div class="contactError">
+            <p>We need some more information from you before we can get started! Provide us a way to contact you</p>
+          </div>
+          <input type="submit" class="button" value="Let's Do This"/>
+        </form>
+      </section>
+    </div>
+  </div>
 </main>
 
 <!-- start contact section -->
-<div class="bg-blue">
+<div class="bg-blue bg-blueContact">
   <div class="container">
     <div class="row">
       <section class="col-md-12 sectionComponents sectionContact bounce-up in-view animation-element">
-        <h2>have some questions?</h2>
-        <h3>Reach out to us for a free consultation session</h3>
-        <a href="contact-us.html" title="Contact Us" class="button button-clear">Contact Us</a>
+        <h2>Annotate Consulting Pte Ltd</h2>
+        <ul>
+          <li>67 Ubi Road 1</li>
+          <li>#10-15 Oxley Bizhub</li>
+          <li>Singapore 408730</li>
+          <li>E-mail:<a href="mailto:info@annotateconsulting.com" title="info@annotateconsulting.com">info@annotateconsulting.com</a></li>
+        </ul>
       </section>
     </div>
   </div>

@@ -92,4 +92,44 @@
 
     $window.on('scroll resize', check_if_in_view);
     $window.trigger('scroll');
+//CONTACT
+  $(document).mouseup(function (e)
+  {
+    var jsDropdown = $(".js-Dropdown");
+    if (!jsDropdown.is(e.target) && jsDropdown.has(e.target).length === 0){
+      $(".contactDropdown").hide();
+    } else {
+      $(".contactDropdown").show();
+    }
+  });
+  $('.contactDropdownOption').click(function(){
+    var getOption = $(this).text();
+    $('input[name=option_item]').val(getOption);
+  });
 })();
+
+//FORM VALIDATION
+function validate()
+{
+   if( document.validateForm.name.value == "" )
+   {
+      $(".contactError").show();
+      return false;
+   }
+   if( document.validateForm.project.value == "" )
+   {
+      $(".contactError").show();
+      return false;
+   }
+   if( document.validateForm.option_item.value == "" )
+   {
+      $(".contactError").show();
+      return false;
+   }
+   if( document.validateForm.email.value == "" )
+   {
+      $(".contactError").show();
+      return false;
+   }
+   return(true);
+}

@@ -56,11 +56,15 @@ nav.menuDesktop{
 /*******REUSABLE*******/
 a,input, .animate, a:before, .sectionBoxCapabilities{@include transition(all ease-in-out 500ms)}
 
-.button, a.button{text-transform:uppercase;padding:5px 20px;border:2px solid $lightblue;border-radius:50px;font-weight:bold;}
+.button, a.button{
+  text-transform:uppercase;padding:5px 20px;border:2px solid $lightblue;border-radius:50px;font-weight:bold;color:$lightblue;background:transparent;
+  &:hover{background:$lightblue;color:$white;text-decoration:none}
+}
 a.button-clear{
   color:$white;border-color:$white;
   &:hover{text-decoration:none;border-color:$lightblue;color:$lightblue;background:$white}
 }
+
 
 .sectionComponents{
   text-align:center;padding:150px 0;
@@ -78,6 +82,7 @@ a.button-clear{
   h4{font-family:$fontHelvetica;font-weight:normal;font-size:$fontMedium - 4;color:$darkblue;margin-bottom:30px;text-transform:uppercase;line-height:1.2}
 }
 
+.bg-lightgray{background:$lightgray}
 .bg-gray{background:$gray}
 .bg-midgray{background:$midgray}
 .bg-darkblue{background:$darkblue}
@@ -160,6 +165,33 @@ a.button-clear{
   color:$white;
   h3, h4{color:$white}
 }
+/*******CONTACT*******/
+.bannerContact{background-image:url(../placeholder/banner-contact.jpg)}
+.bg-blueContact{
+  &:before{display:none}
+}
+.sectionForm{
+  text-transform:uppercase;background:#ececec;
+  .contactLine{
+    display:inline-block;position:relative;margin-bottom:30px;
+    input{text-transform:uppercase;background:transparent;border:none;box-shadow:none;width:250px;border-bottom:1px solid #959595}
+  }
+  .contactDropdown{
+    position:absolute;right:50px;top:50px;z-index:1;display:none;
+    .contactDropdownOption{
+      padding:10px 30px;background:$white;border:1px solid $lightblue;color:$lightblue;border-radius:5px;min-width:150px;cursor:pointer;
+      &:hover{color:$white;background:$lightblue}
+    }
+    .contactDropdownOption:first-child{
+      position:relative;
+      &:before{content:"";position:absolute;top:-21px;left:50%;margin-left:-23.5px;background:url(../images/icon-arrowTop.png) top center no-repeat;width:45px;height:27px} 
+      &:hover:before{background:url(../images/icon-arrowTopActive.png)}
+    }
+  }
+  .contactError{color:$orange;display:none;}
+  .button{margin:40px auto;display:block}
+}
+/*******GENERAL*******/
 /*******ERROR*******/
 .sectionError{
   padding:150px 0 200px;text-align:center;text-transform:uppercase;

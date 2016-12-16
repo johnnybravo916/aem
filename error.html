@@ -18,44 +18,46 @@
 </head>
 <body>
 <!-- start header -->
-<header class="container">
-  <div class="col-xs-7 col-sm-9 col-md-3">
-    <a href="index.html" title="Annotate">
-      <img src="images/branding.png" class="img-responsive"/>
-      <h1 class="hidden">Annotate</h1>
-    </a>
+<header>  
+  <div class="container">
+    <div class="col-xs-7 col-sm-9 col-md-3">
+      <a href="index.html" title="Annotate">
+        <img src="images/branding.png" class="img-responsive"/>
+        <h1 class="hidden">Annotate</h1>
+      </a>
+    </div>
+    <div class="col-xs-5 col-sm-3 col-md-9">
+      <nav class="menuDesktop hidden-sm hidden-xs">
+        <ul>
+          <li><a href="index.html" title="Annotate">Home</a></li>
+          <li><a href="our-capabilities.html" title="Our Capabilities">Our Capabilities</a></li>
+          <li><a href="contact-us.html" title="Contact Us">Contact Us</a></li>
+        </ul>
+      </nav>
+      <a id="menu-responsive" class="icon--menuResponsive pull-right visible-xs visible-sm" href="#sidr">Toggle menu</a>
+    </div>
+    <!--start mobile menu-->
+    <div id="sidr">
+      <nav class="menuMobile">
+        <span class="jsClose-sidr">close</span>
+        <ul>
+          <li><a href="index.html" title="Annotate">Home</a></li>
+          <li>
+            <a href="our-capabilities.html" title="Our Capabilities">Our Capabilities</a>
+            <span class="glyphicon glyphicon-plus js-dropdown"></span>
+            <ul>
+              <li><a href="aem-tapestry.html" title="AEM Tapestry">AEM Tapestry</a></li>
+              <li><a href="sitefinity.html" title="Sitefinity">Sitefinity</a></li>
+              <li><a href="manage-hosting.html" title="Manage Hosting">Manage Hosting</a></li>
+            </ul>
+          </li>
+          <li><a href="contact-us.html" title="Contact Us">Contact Us</a></li>
+        </ul>
+      </nav>
+      <a href="index.html" title="Annotate"><img src="./images/brandingMobile.png" class="branding-mobile"/></a>
+    </div>
+    <!--end mobile menu-->
   </div>
-  <div class="col-xs-5 col-sm-3 col-md-9">
-    <nav class="menuDesktop hidden-sm hidden-xs">
-      <ul>
-        <li><a href="index.html" title="Annotate">Home</a></li>
-        <li><a href="our-capabilities.html" title="Our Capabilities">Our Capabilities</a></li>
-        <li><a href="contact-us.html" title="Contact Us">Contact Us</a></li>
-      </ul>
-    </nav>
-    <a id="menu-responsive" class="icon--menuResponsive pull-right visible-xs visible-sm" href="#sidr">Toggle menu</a>
-  </div>
-  <!--start mobile menu-->
-  <div id="sidr">
-    <nav class="menuMobile">
-      <span class="jsClose-sidr">close</span>
-      <ul>
-        <li><a href="index.html" title="Annotate">Home</a></li>
-        <li>
-          <a href="our-capabilities.html" title="Our Capabilities">Our Capabilities</a>
-          <span class="glyphicon glyphicon-plus js-dropdown"></span>
-          <ul>
-            <li><a href="aem-tapestry.html" title="AEM Tapestry">AEM Tapestry</a></li>
-            <li><a href="sitefinity.html" title="Sitefinity">Sitefinity</a></li>
-            <li><a href="manage-hosting.html" title="Manage Hosting">Manage Hosting</a></li>
-          </ul>
-        </li>
-        <li><a href="contact-us.html" title="Contact Us">Contact Us</a></li>
-      </ul>
-    </nav>
-    <a href="index.html" title="Annotate"><img src="./images/brandingMobile.png" class="branding-mobile"/></a>
-  </div>
-  <!--end mobile menu-->
 </header>
 <!-- end header -->
 
