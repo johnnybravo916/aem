@@ -8,7 +8,7 @@
 html{background:#464646}
 body{background:#fff;font:400 15px/1.5 $fontCentury;color:$fontColorDefault}
 
-video, img{max-width:100%}
+video, img, iframe{max-width:100%}
 /*******USEFUL STUFF*******/
 
 
@@ -191,7 +191,23 @@ a.button-clear{
   .contactError{color:$orange;display:none;}
   .button{margin:40px auto;display:block}
 }
+.bg-blueContact{
+  color:$white;text-align:center;
+  h2{font-size:$fontMedium;font-family:$fontCentury;text-transform:capitalize}
+  li{list-style-type:none;margin-bottom:10px;font-weight:bold}
+  a{color:$white;margin-left:5px}
+}
+.contactIframe {
+  position:relative;
+  iframe{height:800px;width:100%}
+  &:before{content:"";position:absolute;top:0;left:0;content:"";width:100%;height:100%;}
+}
 /*******GENERAL*******/
+.sectionFullImg.sectionComponents{
+  text-align:left;
+  h2{margin:0}
+  .sectionFullImg-content{margin-top:50px}
+}
 /*******ERROR*******/
 .sectionError{
   padding:150px 0 200px;text-align:center;text-transform:uppercase;
@@ -268,7 +284,9 @@ footer small{font-size:$fontMedium}
  
 }
 @media only screen and (max-width : 768px) {
-
+/*General*/
+.sectionFullImg{overflow:hidden}
+.sectionFullImg .sectionFullImg-image{margin:0 -15px;padding:0;}
 }
 @media only screen and (max-width : 480px) {
 
