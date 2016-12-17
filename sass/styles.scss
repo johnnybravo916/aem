@@ -213,8 +213,8 @@ a.button-clear{
 }
 /*******ERROR*******/
 .sectionError{
-  padding:150px 0 200px;text-align:center;text-transform:uppercase;
-  img{margin:0 auto 70px;}
+  padding:150px 0 250px;text-align:center;text-transform:uppercase;
+  img{margin:0 auto 70px;width:250px}
   h1{font-size:$fontLarge;font-family:$fontHelvetica;color:$darkblue;margin:0 0 20px;font-weight:bold}
   p{color:$orange}
 }
@@ -345,13 +345,29 @@ footer small{font-size:$fontSmall}
     background:$white;margin-bottom:-50px;padding-bottom:0;
   }
   .sectionBoxCapabilities{
-  padding:50px;
+  padding:70px 50px;border:0;border-bottom:1px solid #959595;
   .imgWrap{width:80%;min-height:0}
   }
   .sectionBoxCapabilities:last-child{padding-bottom:80px}
+  /*ERROR*/
+  .sectionError{
+    padding:100px 0;
+    h1{font-size:$fontLarge - 20;}
+  }
 }
 
 @media only screen and (max-width : 480px) {
+  /*FONTS*/
+  .slider-main .slider-mainWrap h2, .banner h2{font-size:$fontLarge - 35}
+  .banner strong{font-size:$fontMedium - 4}
+  /*SLIDER*/
+  .slider-wedo .flexslider{margin:0 15px}
+  /*Reusable*/
+  .sectionComponents{
+    h2{font-size:$fontMidLarge - 30}
+    h3{font-size:$fontMedium - 4}
+  }
+  .sectionSitefinity h2{font-size:$fontMedium - 2}
   /*CAPABILITIES*/
   .sectionSitefinity .col-md-6{padding-left:15px;padding-right:15px}
 }
