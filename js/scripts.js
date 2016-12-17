@@ -8,8 +8,10 @@
     var scroll = $(window).scrollTop();
     if(scroll >= fullHeight) {
         $("header").addClass("jsFixed animate");
+        $(".jsMenuInner").addClass("jsFixed animate");
     } else {
         $("header").removeClass("jsFixed");
+        $(".jsMenuInner").removeClass("jsFixed");
     }
   });
 

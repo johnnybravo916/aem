@@ -14,7 +14,7 @@ video, img, iframe{max-width:100%}
 
 /*******HEADER*******/
 header{padding:50px 0;background:$white;}
-header.jsFixed{position:fixed;top:0;left:0;width:100%;padding:10px 0 0;z-index:1;border-bottom:1px solid rgba(0,0,0,0.1)}
+header.jsFixed{position:fixed;top:0;left:0;width:100%;padding:10px 0 0;z-index:2;border-bottom:1px solid rgba(0,0,0,0.1)}
 header .branding-desktop{width:200px}
 nav.menuDesktop{
   float:right;
@@ -80,7 +80,7 @@ a.button-clear{
 
 .sectionBoxMargin{margin-top:70px}
 .sectionBox{
-  img{margin:0 auto 50px}
+  img{margin:0 auto 50px;width:200px}
   h4{font-family:$fontHelvetica;font-weight:normal;font-size:$fontMedium - 4;color:$darkblue;margin-bottom:30px;text-transform:uppercase;line-height:1.2}
 }
 
@@ -124,8 +124,9 @@ a.button-clear{
 .bannerCapabilities{background-image:url(../placeholder/banner-02.jpg)}
 
 .ourCapabilities-bottom{margin:100px 0 50px}
+.jsMenuInner.jsFixed{position:fixed;top:-45px;left:0;z-index:1;width:100%}
 .menuInner{
-  ul{margin:0;padding:0;float:right}
+  ul{margin:0 25px 0 0;padding:0;float:right}
   li{display:inline}
   a{
     display:inline-block;text-transform:uppercase;padding:10px;font-weight:bold;color:$lightblue;margin-left:10px;
@@ -150,11 +151,12 @@ a.button-clear{
 /*******SITEFINITY*******/
 .sectionSitefinity{
   margin:100px 0;color:$white;text-align:left;
-  .sectionSitefinity-img{padding:0 20px}
+  .sectionSitefinity-img{padding:0 20px;width:85%}
   img{margin:0 auto;}
   h2{font-size:$fontMedium + 4;font-weight:normal}
   p{margin-bottom:10px}
   .row{margin-bottom:100px;}
+  .col-md-6{padding-top:70px}
 }
 .bg-midgray .sectionSitefinity{
   margin-bottom:0;
@@ -296,7 +298,7 @@ footer small{font-size:$fontSmall}
  
 }
 @media only screen and (max-width : 768px) {
-/*HEAER*/
+/*HEADER*/
 header.jsFixed{padding-bottom:10px}
 /*Reusable*/
 .sectionComponents{
@@ -308,6 +310,9 @@ header.jsFixed{padding-bottom:10px}
   a{
     max-width:120px;
   }
+}
+.sectionBox{
+  width:250px;margin:0 auto 100px;
 }
 /*Slider*/
 .slider-main{
@@ -332,6 +337,13 @@ header.jsFixed{padding-bottom:10px}
 .sectionFullImg{overflow:hidden}
 .sectionFullImg .sectionFullImg-image{margin:0 -15px;padding:0;}
 }
+/*CAPABILITIES*/
+.sectionSitefinity{
+  text-align:center;
+  .sectionSitefinity-img{padding:0 20px;width:80%;margin-left:auto;margin-right:auto}
+  .col-md-6{padding-left:50px;padding-right:50px}
+}
 @media only screen and (max-width : 480px) {
-
+/*CAPABILITIES*/
+.sectionSitefinity .col-md-6{padding-left:15px;padding-right:15px}
 }
