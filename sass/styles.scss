@@ -211,6 +211,9 @@ a.button-clear{
   h2{margin:0}
   .sectionFullImg-content{margin-top:50px}
 }
+.sectionGeneral{
+  .sectionComponents p{max-width:900px}
+}
 /*******ERROR*******/
 .sectionError{
   padding:150px 0 250px;text-align:center;text-transform:uppercase;
@@ -293,10 +296,10 @@ footer small{font-size:$fontSmall}
 }
 /*******RESPONSIVE*******/
 @media only screen and (max-width : 1200px) {
-
+ /*NOTHING*/
 }
 @media only screen and (max-width : 992px) {
- 
+ /*NOTHING*/
 }
 @media only screen and (max-width : 768px) {
   /*HEADER*/
@@ -334,9 +337,6 @@ footer small{font-size:$fontSmall}
       margin:0 60px;
     }
   }
-  /*General*/
-  .sectionFullImg{overflow:hidden}
-  .sectionFullImg .sectionFullImg-image{margin:0 -15px;padding:0;}
   /*CAPABILITIES*/
   .sectionSitefinity{
     text-align:center;padding-left:50px;padding-right:50px;
@@ -375,6 +375,18 @@ footer small{font-size:$fontSmall}
         &:hover:before{background:url(../images/icon-arrowTopActive.png)}
       }
     }
+  }
+  /*GENERAL*/
+  .sectionFullImg.sectionComponents{
+    padding-top:0;overflow:hidden;
+    .sectionFullImg-image{
+      margin:0 -30px;padding:0;
+      img{margin-bottom:70px}
+    }
+    .sectionFullImg-content{
+      text-align:center;
+      h3{margin-bottom:20px}
+    } 
   }
   /*ERROR*/
   .sectionError{
