@@ -351,6 +351,9 @@ footer small{font-size:$fontSmall}
   .ourCapabilitiesMobile{
     background:$white;margin-bottom:-50px;padding-bottom:0;
   }
+  .ourCapabilities-bottom{
+    .container{margin-left:-5px;margin-right:-5px;padding-left:0;padding-right:0}
+  }
   .sectionBoxCapabilities{
   padding:70px 50px;border:0;border-bottom:1px solid #959595;
   .imgWrap{width:80%;min-height:0}
@@ -411,6 +414,9 @@ footer small{font-size:$fontSmall}
   /*CAPABILITIES*/
   .sectionSitefinity{padding-left:10px;padding-right:10px;}
   .sectionSitefinity .col-md-6{padding-left:15px;padding-right:15px}
+  .ourCapabilitiesMobile{
+    background:$white;margin-bottom:-50px;padding-bottom:0;
+  }
   /*CONTACT*/
   .sectionForm{
     .contactLine{
