@@ -1,4 +1,18 @@
 (function(){
+//FULL HEIGHT
+  var fullHeight = $(window).height();
+  $('.jsFullheight').height(fullHeight);
+//FIXED HEADER
+  $(window).scroll(function() {   
+    var fullHeight = $(window).height();
+    var scroll = $(window).scrollTop();
+    if(scroll >= fullHeight) {
+        $("header").addClass("jsFixed animate");
+    } else {
+        $("header").removeClass("jsFixed");
+    }
+  });
+
 //SIDR
   $(document).ready(function () {
     $('#menu-responsive').sidr({
@@ -57,11 +71,21 @@
     $('.slider-carousel .flexslider').flexslider({
       animation: "slide",
       animationLoop: false,
-      itemWidth: 67,
+      itemWidth: 50,
       itemMargin: 30,
       slideshowSpeed: 5000,
       start: function(slider){
         $('.slider-carousel .flexslider').removeClass('js-preloader');
+      }
+    });
+    $('.slider-wedo .flexslider').flexslider({
+      animation: "slide",
+      animationLoop: false,
+      itemWidth: 270,
+      itemMargin: 15,
+      slideshowSpeed: 5000,
+      start: function(slider){
+        $('.slider-wedo .flexslider').removeClass('js-preloader');
       }
     });
   });
@@ -106,6 +130,8 @@
     var getOption = $(this).text();
     $('input[name=option_item]').val(getOption);
   });
+
+
 })();
 
 //FORM VALIDATION
