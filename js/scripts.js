@@ -71,11 +71,12 @@
       } 
     });
     $('.slider-carousel .flexslider').flexslider({
-      animation: "slide",
-      animationLoop: false,
-      itemWidth: 50,
-      itemMargin: 30,
-      slideshowSpeed: 5000,
+ animation: "slide",
+    animationLoop: false,
+    itemWidth: 50,
+    itemMargin: 5,
+    minItems: 1,
+    maxItems: 8,
       start: function(slider){
         $('.slider-carousel .flexslider').removeClass('js-preloader');
       }
