@@ -164,7 +164,7 @@ function validate()
 }
 
 $(function() {
-  console.log($(".sectionBox h4").height());
+ // console.log($(".sectionBox h4").height());
     $('.sectionBox h4').matchHeight(
       {
           byRow: true,
