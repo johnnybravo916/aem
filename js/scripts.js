@@ -71,20 +71,23 @@
       } 
     });
     $('.slider-carousel .flexslider').flexslider({
- animation: "slide",
-    animationLoop: false,
+animation: 'slide',
     itemWidth: 50,
     itemMargin: 5,
     minItems: 1,
     maxItems: 8,
-      start: function(slider){
-        $('.slider-carousel .flexslider').removeClass('js-preloader');
-      }
+    animationLoop: false,
+    end : function(slider){
+		jQuery('.slider-carousel .flexslider .slides li').each(function(){
+			slider.addSlide('<li>'+jQuery(this).context.innerHTML+'</li>', slider.count);
+			jQuery('.slider-carousel .flexslider .slides').append('<li>'+jQuery(this).context.innerHTML+'</li>');
+      });
+    }
     });
     $('.slider-wedo .flexslider').flexslider({
       animation: "slide",
       animationLoop: false,
-      itemWidth: 270,
+      itemWidth: 300,
       itemMargin: 15,
       slideshowSpeed: 5000,
       start: function(slider){
