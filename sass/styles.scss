@@ -58,6 +58,7 @@ nav.menuDesktop{
 
 /*******REUSABLE*******/
 a,input, .animate, a:before, .sectionBoxCapabilities{@include transition(all ease-in-out 500ms)}
+a.icon--menuResponsive{@include transition(all ease-in-out 100ms)}
 
 .button, a.button{
   text-transform:uppercase;padding:5px 20px;border:2px solid $lightblue;border-radius:50px;font-weight:bold;color:$lightblue;background:transparent;
@@ -205,7 +206,7 @@ a.button-clear{
 .contactIframe {
   position:relative;
   iframe{height:800px;width:100%}
-  &:before{content:"";position:absolute;top:0;left:0;content:"";width:100%;height:100%;}
+  &:before{content:"";position:static;top:0;left:0;content:"";width:100%;height:100%;}
 }
 /*******GENERAL*******/
 .sectionFullImg.sectionComponents{
@@ -233,8 +234,10 @@ a.button-clear{
 }
 
 footer{background:$darkgray;color:$white;padding:100px 0;text-align:center;text-transform:uppercase}
-footer small{font-size:$fontSmall;letter-spacing:2px}
-
+footer small{font-size:$fontSmall + 3;letter-spacing:2px}
+.sectionForm .contactDropdown {width:250px; right:0}
+.bg-blueContact h2 {font-size:18px}
+.bg-blueContact li {font-size:17px; font-weight:400}
 
 
 /*******FLEXSLIDER*******/
@@ -383,6 +386,7 @@ footer small{font-size:$fontSmall;letter-spacing:2px}
       }
     }
   }
+  
   /*GENERAL*/
   .sectionFullImg.sectionComponents{
     padding-top:0;overflow:hidden;
@@ -400,8 +404,24 @@ footer small{font-size:$fontSmall;letter-spacing:2px}
     padding:100px 0;
     h1{font-size:$fontLarge - 20;}
   }
+  /*NEW*/
+  .sectionBoxCapabilities img {position:static}
+  .sectionSitefinity {margin-top:50px}
+  .sectionSitefinity .row {margin-bottom:50px}
+  .sectionComponents {padding-bottom:0}
+  .sectionAem.sectionComponents h3 {color:#ff6132}
+  .sectionBox {width:100%}
+  .sectionSitefinity .sectionSitefinityBlock p {text-align:center}
+  .slider-carousel .flexslider ul.slides img{padding:0 10px}
 }
+@media only screen and (min-width: 768px) {
+  .contactLine br {display:none}
+}
+@media only screen and (max-width: 767px) {
+  footer small {font-size:11px}
+  .sectionBox {margin-bottom:50px}
 
+}
 @media only screen and (max-width : 480px) {
   /*FONTS*/
   .slider-main .slider-mainWrap h2, .banner h2{font-size:$fontLarge - 35}
