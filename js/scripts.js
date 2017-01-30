@@ -71,7 +71,7 @@
       } 
     });
     $('.slider-carousel .flexslider').flexslider({
-animation: 'slide',
+    animation: 'slide',
     itemWidth: 50,
     itemMargin: 5,
     minItems: 1,
@@ -84,15 +84,53 @@ animation: 'slide',
       });
     }
     });
-    $('.slider-wedo .flexslider').flexslider({
-      animation: "slide",
-      animationLoop: false,
-      itemWidth: 300,
-      itemMargin: 15,
-      slideshowSpeed: 5000,
-      start: function(slider){
-        $('.slider-wedo .flexslider').removeClass('js-preloader');
-      }
+    if ($(window).width() > 1100){	
+      $('.slider-wedo .flexslider').flexslider({
+        animation: "slide",
+        animationLoop: false,
+        itemWidth: 270,
+        itemMargin: 15,
+        slideshowSpeed: 5000,
+        start: function(slider){
+          $('.slider-wedo .flexslider').removeClass('js-preloader');
+        }
+      });
+    } else if ($(window).width() <= 1030){
+      $('.slider-wedo .flexslider').flexslider({
+        animation: "slide",
+        animationLoop: false,
+        itemWidth: 300,
+        itemMargin: 15,
+        slideshowSpeed: 5000,
+        start: function(slider){
+          $('.slider-wedo .flexslider').removeClass('js-preloader');
+        }
+      });
+    }	
+    $(window).resize(function(){
+      if ($(window).width() > 900){	
+        $('.slider-wedo .flexslider').flexslider({
+          animation: "slide",
+          animationLoop: false,
+          itemWidth: 280,
+          itemMargin: 15,
+          slideshowSpeed: 5000,
+          start: function(slider){
+            $('.slider-wedo .flexslider').removeClass('js-preloader');
+          }
+        });
+      } else if ($(window).width() <= 900){
+        $('.slider-wedo .flexslider').flexslider({
+          animation: "slide",
+          animationLoop: false,
+          itemWidth: 300,
+          itemMargin: 15,
+          slideshowSpeed: 5000,
+          start: function(slider){
+            $('.slider-wedo .flexslider').removeClass('js-preloader');
+          }
+        });
+      }	
     });
   });
 //ANIMATION

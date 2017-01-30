@@ -296,11 +296,14 @@ footer small{font-size:$fontSmall + 3;letter-spacing:2px}
   .flexslider{
     .flex-direction-nav{display:none}
     ol{text-align:center;margin-left:0;padding-left:0}
+    ul li{float:left}
+    ul.slides li{width:270px}
     ol li{display:inline}
     ol li a{background:#959595;border-radius:50%;height:15px;width:15px;font-size:0;display:inline-block;margin:0 5px}
     ol li a.flex-active{background:$lightblue}
   }
 }
+
 /*******RESPONSIVE*******/
 @media only screen and (max-width : 1200px) {
  /*NOTHING*/
@@ -422,6 +425,11 @@ footer small{font-size:$fontSmall + 3;letter-spacing:2px}
   footer small {font-size:11px}
   .sectionBox {margin-bottom:50px}
 
+}
+@media only screen and (max-width: 640px){
+  .slider-wedo .flexslider {
+      margin: 0 150px;
+  }
 }
 @media only screen and (max-width : 480px) {
   /*FONTS*/
