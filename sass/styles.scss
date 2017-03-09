@@ -131,20 +131,20 @@ a.button-clear{
   li{display:inline}
   a{
     display:inline-block;text-transform:uppercase;padding:10px;font-weight:normal;color:$lightblue;margin-left:10px;
-    &:hover{text-decoration:none;background:none;font-weight:bold}
+    &:hover{text-decoration:none;background:none;font-weight:bold;color:$lightblue}
   }
-  a.js-active{font-weight:bold}
+  a.js-active{font-weight:bold;color:$lightblue}
 }
 
 .sectionBoxCapabilities{
-  border:1px solid $midgray;background:#d7d7d7;padding:50px 100px;
+  border:1px solid $midgray;background:#d7d7d7;padding:50px 100px 0;height:585px;
   img{margin:0 auto 20px;position:absolute;bottom:0}
   .imgWrap{min-height:250px;width:200px;margin:0 auto;position:relative}
   h4{font-family:$fontHelvetica;font-weight:normal;font-size:$fontMedium;color:$darkblue;margin-bottom:30px;text-transform:uppercase;line-height:1.2}
   p{color:$fontColorDefault;min-height:70px}
   a{display:block}
   a:hover{text-decoration:none;}
-  &:hover{
+  &:hover{ 
     text-decoration:none;background:$darkblue;
     h4, p, a{color:$white}
   }
@@ -152,8 +152,8 @@ a.button-clear{
 /*******SITEFINITY*******/
 .sectionSitefinity{
   margin:100px 0;color:$white;text-align:left;
-  .sectionSitefinity-img{padding:0 20px;width:85%}
-  img{margin:0 auto;}
+  .sectionSitefinity-img{padding:0 20px;text-align:right}
+  img{margin:0px auto 0;display:inline;width:85%;}
   h2{font-size:$fontMedium + 4;font-weight:normal}
   p{margin-bottom:10px;max-width:500px;margin-left:0;}
   .row{margin-bottom:100px;}
@@ -199,8 +199,8 @@ a.button-clear{
 }
 .bg-blueContact{
   color:$white;text-align:center;
-  h2{font-size:$fontMedium;font-family:$fontCentury;text-transform:capitalize}
-  li{list-style-type:none;margin-bottom:10px;font-weight:bold}
+  h2{font-size:$fontMedium + 2;font-family:$fontCentury;text-transform:capitalize}
+  li{list-style-type:none;margin-bottom:10px;font-weight:normal}
   a{color:$white;margin-left:5px}
 }
 .contactIframe {
@@ -378,7 +378,7 @@ footer small{font-size:$fontSmall + 3;letter-spacing:2px}
       input{width:105px}
     }
     .contactDropdown{
-      position:absolute;right:50px;top:50px;z-index:1;display:none;
+      position:absolute;right:-70px;top:50px;z-index:1;display:none;
       .contactDropdownOption{
         padding:10px 30px;background:$white;border:1px solid $lightblue;color:$lightblue;border-radius:5px;min-width:150px;cursor:pointer;
         &:hover{color:$white;background:$lightblue}
