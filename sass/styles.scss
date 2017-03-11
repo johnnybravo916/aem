@@ -1,8 +1,8 @@
 @import "scrollToAnimate.css";
+@import "owl.carousel.min.css";
 @import "_partials/mixins";
 @import "_partials/variables";
 @import "_partials/typography";
-
 
 /*******GLOBAL*******/
 html{background:#464646}
@@ -141,6 +141,7 @@ a.button-clear{
   img{margin:0 auto 20px;position:absolute;bottom:0}
   .imgWrap{min-height:250px;width:200px;margin:0 auto;position:relative}
   h4{font-family:$fontHelvetica;font-weight:normal;font-size:$fontMedium;color:$darkblue;margin-bottom:30px;text-transform:uppercase;line-height:1.2}
+  h4 a{color:#2d4d66}
   p{color:$fontColorDefault;min-height:70px}
   a{display:block}
   a:hover{text-decoration:none;}
@@ -275,21 +276,13 @@ footer small{font-size:$fontSmall + 3;letter-spacing:2px}
 }
 
 .slider-carousel{
-  .flexslider{
-    position:relative; 
-    .flex-viewport{margin:0 70px}
-    ul.slides{margin:25px 0;}
-    ul.slides img{filter: grayscale(100%);padding:0 35px}
-  }
-  .flex-control-nav{display:none}
-  .flex-direction-nav{
-    li{position:absolute;top:0}
-    li.flex-nav-prev{left:0;}
-    li.flex-nav-next{right:150px;}
-    a{font-size:0;display:block;position:absolute;left:0;height:100px;width:150px;}
-    a.flex-prev{background:url(../images/icon-bannerLeftBig.png) left center no-repeat;background-size:75%}
-    a.flex-next{background:url(../images/icon-bannerRightBig.png) right center no-repeat;background-size:75%}
-    }
+  .owl-carousel .owl-stage-outer{margin:0 60px 0 65px}
+  .owl-carousel .owl-stage div{padding:0 20px}
+  .owl-carousel .owl-stage div img{filter: grayscale(100%);margin:0 auto}
+  .owl-nav{position:absolute;top:-15px;width:100%}
+  .owl-nav div{font-size:0;display:block;position:absolute;height:100px;width:150px;}
+  .owl-prev{background:url(../images/icon-bannerLeftBig.png) left top no-repeat;background-size:75%;left:0}
+  .owl-next{background:url(../images/icon-bannerRightBig.png) right top no-repeat;background-size:75%;right:0}
 }
 
 .slider-wedo{
@@ -321,6 +314,7 @@ footer small{font-size:$fontSmall + 3;letter-spacing:2px}
     h3{font-size:$fontMedium - 4}
     p{margin-bottom:40px}
   }
+  .sectionComponents.bg-darkblue p{color:$white}
   .sectionCustomersHome{
     a{
       max-width:120px;
@@ -353,8 +347,8 @@ footer small{font-size:$fontSmall + 3;letter-spacing:2px}
     text-align:center;padding-left:50px;padding-right:50px;
     .sectionSitefinityBlock{
       img{margin-bottom:50px}
-      ul{text-align:left;}
-      p{text-align:left}
+      ul{text-align:center;}
+      p{text-align:center}
     } 
     .sectionSitefinity-img{padding:0 20px;width:80%;margin-left:auto;margin-right:auto}
     .col-md-6{padding-left:50px;padding-right:50px}
@@ -378,9 +372,9 @@ footer small{font-size:$fontSmall + 3;letter-spacing:2px}
       input{width:105px}
     }
     .contactDropdown{
-      position:absolute;right:-70px;top:50px;z-index:1;display:none;
+      position:absolute;right:-90px;top:50px;z-index:1;display:none;
       .contactDropdownOption{
-        padding:10px 30px;background:$white;border:1px solid $lightblue;color:$lightblue;border-radius:5px;min-width:150px;cursor:pointer;
+        padding:10px;background:$white;border:1px solid $lightblue;color:$lightblue;border-radius:5px;min-width:150px;max-width:220px;cursor:pointer;line-height:1;
         &:hover{color:$white;background:$lightblue}
       }
       .contactDropdownOption:first-child{
@@ -409,7 +403,7 @@ footer small{font-size:$fontSmall + 3;letter-spacing:2px}
     h1{font-size:$fontLarge - 20;}
   }
   /*NEW*/
-  .sectionBoxCapabilities img {position:static}
+  .sectionBoxCapabilities img {position:static;margin-bottom:20px}
   .sectionSitefinity {margin-top:50px}
   .sectionSitefinity .row {margin-bottom:50px}
   .sectionComponents {padding-bottom:0}
@@ -417,12 +411,23 @@ footer small{font-size:$fontSmall + 3;letter-spacing:2px}
   .sectionBox {width:100%}
   .sectionSitefinity .sectionSitefinityBlock p {text-align:center}
   .slider-carousel .flexslider ul.slides img{padding:0 10px}
+
+  
+  /*0310*/
+  .sectionComponents h3{margin-bottom:30px;margin-top:10px}
+  .bounce-up{transform:translate3d(0px, 0px, 0px)!important;opacity:1!important}
+  .slider-carousel{
+    .owl-carousel .owl-stage-outer{margin-top:50px;}
+    .owl-carousel .owl-stage div{padding:0}
+    .owl-carousel .owl-stage img{width:35px;}
+    .owl-nav{top:-20px}
+  }
 }
 @media only screen and (min-width: 768px) {
   .contactLine br {display:none}
 }
 @media only screen and (max-width: 767px) {
-  footer small {font-size:11px}
+  footer small {font-size:10px}
   .sectionBox {margin-bottom:50px}
 
 }
@@ -442,7 +447,7 @@ footer small{font-size:$fontSmall + 3;letter-spacing:2px}
   .sectionComponents{
     padding-top:100px;padding-bottom:100px;
     h2{font-size:$fontMidLarge - 30}
-    h3{font-size:$fontMedium - 4}
+    h3{font-size:$fontMedium - 9}
   }
   .sectionSitefinity h2{font-size:$fontMedium - 2}
   /*CAPABILITIES*/

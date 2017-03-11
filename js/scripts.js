@@ -50,7 +50,7 @@
   var currentYear = (new Date).getFullYear();
   $('.js-Year').text(currentYear);
 
-//FLEXSLIDER
+//FLEXSLIDER and OWL
   $(window).load(function(){
     $('.slider-main .flexslider').flexslider({
       animation: "slide",
@@ -83,6 +83,16 @@
 			jQuery('.slider-carousel .flexslider .slides').append('<li>'+jQuery(this).context.innerHTML+'</li>');
       });
     }
+    });
+    $(".owl-carousel").owlCarousel({
+      loop:true,
+      nav:true,
+      responsive:{
+        200:{items:6},
+        769:{items:6},
+        1000:{items:9},
+        2000:{items:9}
+      }
     });
     if ($(window).width() > 1100){	
       $('.slider-wedo .flexslider').flexslider({
